@@ -12,8 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <header>
+<body class="front-page-body">
+    <header class="front-page-header">
         <a href="index.html" aria-current="page" class="logo">Cykelnavet</a>
         <button id="open-sidebarbutton" aria-controls="navBar" aria-expanded="false" aria-label="Öppna huvudmeny" onclick="openSidebar()">
             <svg xmlns="http://www.w3.org/2000/svg" height="3rem" viewBox="0 -960 960 960" width="3rem" fill="#fff">
@@ -49,11 +49,17 @@
         </nav>
         <div id="overlay" aria-hidden="true" onclick="closeSidebar()"></div>
     </header>
+    <main class="main-page">
 
-    <main>
-        <section>
-            <h1>Fynda dina favoritdelar till cykeln här!</h1>
-        </section>
+        <picture class="hero-image">
+            <source srcset="bilderavif/cyclingstore.avif" type="image/avif">
+            <img src="bilder/cyclingstore.jpg" alt="Cykelbutik med cyklar och cykeldelar">
+        </picture>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+        </div>
 
     </main>
     <footer>
@@ -105,4 +111,10 @@
             </ul>
         </nav>
     </footer>
+    <script>
+        window.addEventListener("scroll", () => {
+            const header = document.querySelector(".front-page-header");
+            header.classList.toggle("scrolled", window.scrollY > 40);
+        });
+    </script>
 </body>

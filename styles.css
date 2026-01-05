@@ -10,7 +10,7 @@
         }
         
         body {
-            background: #DDA853;
+            /*background: #DDA853;*/
             display: flex;
             flex-direction: column;
             color: #333;
@@ -326,14 +326,122 @@
             align-items: center;
         }
         
+        .front-page-body {
+            background-color: #272832;
+            z-index: -10;
+        }
+        
+        .front-page-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: #272832;
+            transition: 0.3s ease-in-out;
+        }
+        
+        .front-page-header.scrolled {
+            background-color: rgba(0, 0, 0, 0);
+            transition: 0.3s ease-in-out;
+        }
+        
+        .main-page {
+            background-color: #000000;
+            position: relative;
+            min-height: 100vh;
+            width: 100%;
+            background-color: #272832;
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+        }
+        
+        .hero-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.5;
+        }
+        /* .cycling-store {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 20;
+            opacity: 0.4;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+         .front-page {
+            background-image: url(bilderavif/cyclingstore.avif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            opacity: 0.5;
+        }
+        
+        
+        .front-page-body {
+            background-color: #000000;
+            z-index: -10;
+        }
+        
+      
+        */
+        
+        .red-shirt {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .white-shirt {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .saddle {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .red-shirt img,
+        .white-shirt img {
+            border-radius: 20px;
+            width: 20%;
+            height: auto;
+            box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.726);
+        }
+        
+        .saddle img {
+            border-radius: 20px;
+            width: 20%;
+            height: auto;
+            box-shadow: 0 0 10px 3px rgba(250, 250, 250, 0.726);
+        }
+        
         @media (max-width: 767px) {
+            .red-shirt img {
+                width: 50%;
+            }
             header {
                 background-color: #272832;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 z-index: 100;
-                min-height: 11vh;
+                min-height: 15vh;
             }
             #open-sidebarbutton {
                 position: sticky;
