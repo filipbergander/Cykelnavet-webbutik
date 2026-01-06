@@ -50,23 +50,31 @@
         <div id="overlay" aria-hidden="true" onclick="closeSidebar()"></div>
     </header>
     <main class="main-page">
+        <section class="hero-overlay">
+            <div>
+                <h1>Din webbutik för allt till din cykel</h1>
+                <p>Hitta cyklar, tillbehör och utrustning för alla typer av cykling hos Cykelnavet. Vi erbjuder kvalitetsprodukter från ledande varumärken till konkurrenskraftiga priser.</p>
+            </div>
+        </section>
         <picture class="hero-image">
-            <source srcset="bilderavif/cyclingstore-800.avif 800w, 
-                bilderavif/cyclingstore-1600.avif 1600w, 
-                bilderavif/cyclingstore-2400.avif 2400w" type="image/avif" sizes="(max-width: 600px) 800px,
-                (max-width: 1200px) 1600px, 2400px">
-            <source srcset="bilder/cyclingstore-800.jpg 800w, 
-            bilder/cyclingstore-1600.jpg 1600w, 
-            bilder/cyclingstore-2400.jpg 2400w" type="image/jpeg" sizes="(max-width: 600px) 800px,
-            (max-width: 1200px) 1600px, 2400px">
+            <!-- Laddar in mindre bild vid mobilläge -->
+            <source media="(max-width: 600px)" srcset="bilderavif/cyclingstore-800.avif" type="image/avif">
+            <source media="(max-width: 600px)" srcset="bilder/cyclingstore-800.jpg" type="image/jpeg">
+
+            <!-- Laddar in medium bild vid tabletläge -->
+            <source media="(max-width: 1200px)" srcset="bilderavif/cyclingstore-1600.avif" type="image/avif">
+            <source media="(max-width: 1200px)" srcset="bilder/cyclingstore-1600.jpg" type="image/jpeg">
+
+            <!-- Laddar in stor bild vid desktopläge -->
+            <source srcset="bilderavif/cyclingstore-2400.avif" type="image/avif">
+            <source srcset="bilder/cyclingstore-2400.jpg" type="image/jpeg">
+
+            <!-- fallback bild -->
             <img src="bilder/cyclingstore-1600.jpg" alt="Cykelbutik med cyklar och utrustning" fetchpriority="high" loading="eager" decoding="async">
         </picture>
-        <div class="hero-overlay"></div>
-
-        <div class="hero-content">
-        </div>
 
     </main>
+
     <footer>
         <address class="footer-contact">
             <h3>Kontaktuppgifter</h3>

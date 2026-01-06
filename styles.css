@@ -344,19 +344,42 @@
             transition: 0.3s ease-in-out;
         }
         
+        .hero-overlay {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            z-index: 10;
+            color: #ffffff;
+            width: 30%;
+            min-width: 250px;
+            max-width: 600px;
+            margin-top: 30vh;
+            background-color: #2F2E2A;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.726);
+        }
+        
         .main-page {
-            background-color: #000000;
             position: relative;
             min-height: 100vh;
-            width: 100%;
+            min-width: 100%;
             background-color: #272832;
             overflow: hidden;
+            z-index: -5;
         }
         
         .hero-image {
-            width: 100%;
-            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            object-fit: cover;
             background-color: #000000;
+            z-index: -1;
         }
         
         .hero-image img {
@@ -367,6 +390,7 @@
             opacity: 0.5;
             transform: scale(1);
             animation: heroZoom 18s ease-in-out infinite alternate;
+            z-index: 10;
         }
         /* Animationer för inzoomning-effekt av hero-bilden på startsidan */
         
@@ -451,6 +475,19 @@
             height: auto;
             box-shadow: 0 0 10px 3px rgba(250, 250, 250, 0.726);
         }
+        /* För att styra vilken bild som används i hero, startsidan. desktop: större än 1201px */
+        /* @media (min-width: 1201px) {
+            .hero-image img {
+                max-width: 1200px;
+            }
+        }*/
+        /* Tablet-bilden används vid skärmstorlekar som är under 1200px */
+        /* @media (max-width: 1200px) {
+            .hero-image img {
+                max-width: 768px;
+            }
+        }
+        */
         
         @media (max-width: 767px) {
             .red-shirt img {
@@ -598,6 +635,12 @@
                 gap: 1rem;
             }
         }
+        /* mobil-bilden används vid skärmstorlekar som är under 600px */
+        /* @media (max-width: 600px) {
+            .hero-image img {
+                max-width: 375px;
+            }
+        }*/
         
         @media (max-width: 430px) {
             .logo {
@@ -606,5 +649,10 @@
             .company-info,
             .web-developer {
                 width: 90%;
+            }
+            .hero-overlay {
+                width: 80%;
+                margin-top: 20vh;
+                min-width: 100px;
             }
         }
