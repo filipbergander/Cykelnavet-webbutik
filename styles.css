@@ -350,6 +350,7 @@
             min-height: 100vh;
             width: 100%;
             background-color: #272832;
+            overflow: hidden;
         }
         
         .hero-image {
@@ -364,6 +365,26 @@
             height: 100%;
             object-fit: cover;
             opacity: 0.5;
+            transform: scale(1);
+            animation: heroZoom 18s ease-in-out infinite alternate;
+        }
+        /* Animationer för inzoomning-effekt av hero-bilden på startsidan */
+        
+        @keyframes heroZoom {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+        /*Inaktiverar animationen för användare som valt minskad rörelse */
+        
+        @media (prefers-reduced-motion: reduce) {
+            .hero-image img {
+                animation: none;
+                transform: scale(1);
+            }
         }
         /* .cycling-store {
             position: relative;

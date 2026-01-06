@@ -50,12 +50,15 @@
         <div id="overlay" aria-hidden="true" onclick="closeSidebar()"></div>
     </header>
     <main class="main-page">
-
         <picture class="hero-image">
-            <source srcset="bilderavif/cyclingstore.avif" type="image/avif">
-            <img src="bilder/cyclingstore.jpg" alt="Cykelbutik med cyklar och cykeldelar">
+            <source srcset="bilderavif/cyclingstore-800.avif 800w, 
+                bilderavif/cyclingstore-1600.avif 1600w, 
+                bilderavif/cyclingstore-2400.avif 2400w" type="image/avif" sizes="100vw">
+            <source srcset="bilder/cyclingstore-800.jpg 800w, 
+            bilder/cyclingstore-1600.jpg 1600w, 
+            bilder/cyclingstore-2400.jpg 2400w" type="image/jpeg" sizes="100vw">
+            <img src="bilder/cyclingstore-1600.jpg" alt="Cykelbutik med cyklar och utrustning" fetchpriority="high" loading="eager" decoding="async">
         </picture>
-
         <div class="hero-overlay"></div>
 
         <div class="hero-content">
