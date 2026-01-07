@@ -23,7 +23,7 @@
             text-decoration: none;
             flex-direction: row;
             background-color: #272832;
-            min-height: 55px;
+            min-height: 9vh;
             font-family: 'Outfit', Arial, sans-serif;
         }
         
@@ -81,6 +81,7 @@
             font-weight: bold;
             align-items: center;
             justify-content: center;
+            font-family: "Outfit", "Arial", sans-serif;
         }
         
         .menu-text {
@@ -454,40 +455,82 @@
             }
         }
         
-        .red-shirt {
-            margin-top: 2rem;
-            margin-bottom: 2rem;
+        .products-main {
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5rem;
+        }
+        
+        .products {
+            display: flex;
+        }
+        
+        .products h1 {
+            display: flex;
+            align-items: center;
+            text-align: center;
             justify-content: center;
         }
         
-        .white-shirt {
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            display: flex;
-            justify-content: center;
+        .product-item a {
+            text-decoration: none;
+            color: inherit;
         }
         
-        .saddle {
-            margin-top: 2rem;
-            margin-bottom: 2rem;
+        .product-item {
             display: flex;
-            justify-content: center;
-        }
-        
-        .red-shirt img,
-        .white-shirt img {
-            border-radius: 20px;
-            width: 20%;
+            flex-direction: column;
+            background-color: #e2e2e2;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            overflow: hidden;
+            box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.123);
+            width: fit-content;
+            transition: transform 0.3s ease;
+            margin: 1rem;
+            width: 350px;
             height: auto;
-            box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.726);
+        }
+        
+        .product-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .product-info {
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .product-info .price {
+            font-weight: bold;
+            color: #BD5500;
+        }
+        
+        .select-product-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #ff7300;
+            color: #000000;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        
+        .select-product-btn:hover {
+            background: linear-gradient(to right, #646363, #0e0505);
+            color: #ffffff;
+        }
+        
+        .blue-shirt {
+            aspect-ratio: 1.14 / 1;
         }
         
         .saddle img {
-            border-radius: 20px;
-            width: 20%;
-            height: auto;
-            box-shadow: 0 0 10px 3px rgba(250, 250, 250, 0.726);
+            border-radius: 10px;
         }
         
         @media (max-width: 767px) {

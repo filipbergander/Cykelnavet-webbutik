@@ -10,11 +10,17 @@
     <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/bilder/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/bilder/favicon.svg">
+    <link rel="shortcut icon" href="/bilder/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/bilder/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="MyWebSite">
+    <link rel="manifest" href="/bilder/site.webmanifest">
 </head>
 
 <body>
     <header>
-        <a href="index.html" aria-current="page" class="logo">Cykelnavet</a>
+        <a href="index.html" class="logo"><img src="bilder/cykelnav-logo.svg"></a>
         <button id="open-sidebarbutton" aria-controls="navBar" aria-expanded="false" aria-label="Öppna huvudmeny" onclick="openSidebar()">
             <svg xmlns="http://www.w3.org/2000/svg" height="3rem" viewBox="0 -960 960 960" width="3rem" fill="#fff">
                 <path
@@ -30,8 +36,9 @@
                                 d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z" />
                         </svg><span class="menu-text">Stäng</span>
                     </button></li>
-                <li><a href="produkter.html" id="current-link" class="gear-icon"><span><svg xmlns="http://www.w3.org/2000/svg"
-                                height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                <li><a href="produkter.html" id="current-link" class="gear-icon"><span><svg
+                                xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#fff">
                                 <path
                                     d="M200-80q-83 0-141.5-58.5T0-280q0-83 58.5-141.5T200-480q83 0 141.5 58.5T400-280q0 83-58.5 141.5T200-80Zm0-80q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm240-40v-200L312-512q-12-11-18-25.5t-6-30.5q0-16 6.5-30.5T312-624l112-112q12-12 27.5-18t32.5-6q17 0 32.5 6t27.5 18l76 76q28 28 64 44t76 16v80q-57 0-108.5-22T560-604l-32-32-96 96 88 92v248h-80Zm180-540q-33 0-56.5-23.5T540-820q0-33 23.5-56.5T620-900q33 0 56.5 23.5T700-820q0 33-23.5 56.5T620-740ZM760-80q-83 0-141.5-58.5T560-280q0-83 58.5-141.5T760-480q83 0 141.5 58.5T960-280q0 83-58.5 141.5T760-80Zm0-80q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Z" />
                             </svg></span>Produkter</a></li>
@@ -57,27 +64,105 @@
             </ol>
         </nav>
     </div>
-    <main>
-        <section>
-            <div>
-                <picture class="red-shirt">
-                    <source srcset="bilderavif/redshirtfront.avif" type="image/avif">
-                    <img src="bilderjpg/redshirtfront.jpg" alt="Röd cykeltröja" width="485" height="409">
-                </picture>
-            </div>
-            <div>
-                <picture class="white-shirt">
-                    <source srcset="bilderavif/whiteshirtfront.avif" type="image/avif">
-                    <img src="bilderjpg/whiteshirtfront.jpg" alt="Röd cykeltröja" width="485" height="409">
-                </picture>
-            </div>
-            <div>
-                <picture class="saddle">
-                    <source srcset="bilderavif/saddle.avif" type="image/avif">
-                    <img src="bilderjpg/saddle.jpg" alt="Cykelsadel" width="485" height="409">
-                </picture>
-            </div>
+    <main class="products-main">
+        <h1>Våra produkter</h1>
+        <section class="products">
+            <article class="product-item">
+                <a href="blueshirt.html">
+                    <picture class="blue-shirt">
+                        <source srcset="bilderavif/blueshirtfront.avif" type="image/avif">
+                        <img src="bilderjpg/blueshirtfront.png" alt="Blå cykeltröja" width="300" height="263">
+                    </picture>
+                    <div class="product-info">
+                        <h2>Blå cykeltröja</h2>
+                        <p>Italiens landslagströja "Maglia Azzurra"</p>
+                        <p class="price">349 kr</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-item">
+                <a href="redshirt.html">
+                    <picture class="red-shirt">
+                        <source srcset="bilderavif/redshirtfront.avif" type="image/avif">
+                        <img src="bilderjpg/redshirtfront.png" alt="Röd cykeltröja" width="300" height="263">
+                    </picture>
+                    <div class="product-info">
+                        <h2>Röd cykeltröja</h2>
+                        <p>Från det professionella cykelstallet TP</p>
+                        <p class="price">449 kr</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-item">
+                <a href="saddle.html">
+                    <picture class="saddle">
+                        <source srcset="bilderavif/saddle.avif" type="image/avif">
+                        <img src="bilderjpg/saddle.jpg" alt="Cykelsadel" width="300" height="263">
+                    </picture>
+                    <div class="product-info">
+                        <h2>Cykelsadel</h2>
+                        <p>Tillverkad av välkända Prologo</p>
+                        <p class="price">349 kr</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-item">
+                <a href="blueshirt.html">
+                    <picture class="blue-shirt">
+                        <source srcset="bilderavif/blueshirtfront.avif" type="image/avif">
+                        <img src="bilderjpg/blueshirtfront.png" alt="Blå cykeltröja" width="300" height="263">
+                    </picture>
+                    <div class="product-info">
+                        <h2>Blå cykeltröja</h2>
+                        <p>Den italienska nationaltröjan för cykling</p>
+                        <p class="price">349 kr</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="product-item">
+                <a href="blueshirt.html">
+                    <picture class="blue-shirt">
+                        <source srcset="bilderavif/blueshirtfront.avif" type="image/avif">
+                        <img src="bilderjpg/blueshirtfront.png" alt="Blå cykeltröja" width="300" height="263">
+                    </picture>
+                    <div class="product-info">
+                        <h2>Blå cykeltröja</h2>
+                        <p>Den italienska nationaltröjan för cykling</p>
+                        <p class="price">349 kr</p>
+                    </div>
+                </a>
+            </article>
+
+
         </section>
+        <!--   <a href="blueshirt.html" class="select-product-btn">Se mer om produkt</a> <a href="blueshirt.html" class="product-item">
+            <picture class="blue-shirt">
+                <source srcset="bilderavif/blueshirtfront.avif" type="image/avif">
+                <img src="bilderjpg/blueshirtfront.png" alt="Blå cykeltröja" width="450" height="394">
+            </picture>
+            <ul>
+                <li>Cykeltröja från Italien</li>
+                <li>349 kr</li>
+            </ul>
+            <h2>Välj produkt</h2>
+        </a>
+        <div>
+            <picture class="white-shirt">
+                <source srcset="bilderavif/whiteshirtfront.avif" type="image/avif">
+                <img src="bilderjpg/whiteshirtfront.jpg" alt="Röd cykeltröja" width="485" height="409">
+            </picture>
+        </div>
+        <div>
+            <picture class="saddle">
+                <source srcset="bilderavif/saddle.avif" type="image/avif">
+                <img src="bilderjpg/saddle.jpg" alt="Cykelsadel" width="485" height="409">
+            </picture>
+        </div>-->
+
     </main>
     <footer>
         <address class="footer-contact">
