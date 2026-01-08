@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cykelnavet - Hem</title>
+    <title>Cykelnavet - Produkter</title>
     <meta name="description" content="Din webbutik för utrustning till din cykel. Hitta allt du behöver för din cykel hos Cykelnavet.">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
@@ -20,7 +20,7 @@
 
 <body>
     <header>
-        <a href="index.html" class="logo"><img src="bilder/cykelnav-logo.svg"></a>
+        <a href="index.html" class="logo"><img src="bilder/cykelnav-logo.svg" alt="Företagslogotyp Cykelnavet"></a>
         <button id="open-sidebarbutton" aria-controls="navBar" aria-expanded="false" aria-label="Öppna huvudmeny" onclick="openSidebar()">
             <svg xmlns="http://www.w3.org/2000/svg" height="3rem" viewBox="0 -960 960 960" width="3rem" fill="#fff">
                 <path
@@ -66,12 +66,53 @@
     </div>
     <main class="products-main">
         <h1>Våra produkter</h1>
+        <article class="first-item">
+            <a href="bicycle.html">
+                <picture class="bicycle">
+                    <source srcset="bilderavif/bicycle.avif" type="image/avif">
+                    <img src="bilderjpg/bicycle.png" alt="Cykel från Specialized" width="800" height="508" fetchpriority="high">
+                </picture>
+                <div class="cycle-info">
+                    <h2>Kolfiber cykel av Specialized</h2>
+                    <p>Vår lättaste och snabbaste cykel</p>
+                    <p class="price">49 999 kr</p>
+                </div>
+            </a>
+        </article>
+        <section class="products-equipment">
+            <article class="product-item">
+                <a href="saddle.html">
+                    <picture class="saddle">
+                        <source srcset="bilderavif/saddle.avif" type="image/avif">
+                        <img src="bilderjpg/saddle.jpg" alt="Cykelsadel" width="450" height="428" loading="lazy">
+                    </picture>
+                    <div class="product-info">
+                        <h2>Cykelsadel</h2>
+                        <p>Tillverkad av välkända Prologo</p>
+                        <p class="price">799 kr</p>
+                    </div>
+                </a>
+            </article>
+            <article class="product-item">
+                <a href="helmet.html">
+                    <picture class="helmet">
+                        <source srcset="bilderavif/helmetfront.avif" type="image/avif">
+                        <img src="bilderjpg/helmetfront.jpg" alt="Cykelhjälm" width="450" height="428" loading="lazy">
+                    </picture>
+                    <div class="product-info">
+                        <h2>Röd cykelhjälm</h2>
+                        <p>Det viktigaste skyddet för dig</p>
+                        <p class="price">899 kr</p>
+                    </div>
+                </a>
+            </article>
+        </section>
         <section class="products">
             <article class="product-item">
                 <a href="blueshirt.html">
                     <picture class="blue-shirt">
-                        <source srcset="bilderavif/blueshirtfront.avif" type="image/avif">
-                        <img src="bilderjpg/blueshirtfront.png" alt="Blå cykeltröja" width="300" height="263">
+                        <source srcset="bilderavif/blueshirt-front-small.avif" type="image/avif">
+                        <img src="bilderjpg/blueshirt-front-small.png" alt="Blå cykeltröja" width="450" height="409" loading="lazy">
                     </picture>
                     <div class="product-info">
                         <h2>Blå cykeltröja</h2>
@@ -80,12 +121,11 @@
                     </div>
                 </a>
             </article>
-
             <article class="product-item">
                 <a href="redshirt.html">
                     <picture class="red-shirt">
-                        <source srcset="bilderavif/redshirtfront.avif" type="image/avif">
-                        <img src="bilderjpg/redshirtfront.png" alt="Röd cykeltröja" width="300" height="263">
+                        <source srcset="bilderavif/redshirt-front-small.avif" type="image/avif">
+                        <img src="bilderjpg/redshirt-front-small.png" alt="Röd cykeltröja" width="450" height="409" loading="lazy">
                     </picture>
                     <div class="product-info">
                         <h2>Röd cykeltröja</h2>
@@ -94,74 +134,8 @@
                     </div>
                 </a>
             </article>
-
-            <article class="product-item">
-                <a href="saddle.html">
-                    <picture class="saddle">
-                        <source srcset="bilderavif/saddle.avif" type="image/avif">
-                        <img src="bilderjpg/saddle.jpg" alt="Cykelsadel" width="300" height="263">
-                    </picture>
-                    <div class="product-info">
-                        <h2>Cykelsadel</h2>
-                        <p>Tillverkad av välkända Prologo</p>
-                        <p class="price">349 kr</p>
-                    </div>
-                </a>
-            </article>
-
-            <article class="product-item">
-                <a href="blueshirt.html">
-                    <picture class="blue-shirt">
-                        <source srcset="bilderavif/blueshirtfront.avif" type="image/avif">
-                        <img src="bilderjpg/blueshirtfront.png" alt="Blå cykeltröja" width="300" height="263">
-                    </picture>
-                    <div class="product-info">
-                        <h2>Blå cykeltröja</h2>
-                        <p>Den italienska nationaltröjan för cykling</p>
-                        <p class="price">349 kr</p>
-                    </div>
-                </a>
-            </article>
-
-            <article class="product-item">
-                <a href="blueshirt.html">
-                    <picture class="blue-shirt">
-                        <source srcset="bilderavif/blueshirtfront.avif" type="image/avif">
-                        <img src="bilderjpg/blueshirtfront.png" alt="Blå cykeltröja" width="300" height="263">
-                    </picture>
-                    <div class="product-info">
-                        <h2>Blå cykeltröja</h2>
-                        <p>Den italienska nationaltröjan för cykling</p>
-                        <p class="price">349 kr</p>
-                    </div>
-                </a>
-            </article>
-
-
         </section>
-        <!--   <a href="blueshirt.html" class="select-product-btn">Se mer om produkt</a> <a href="blueshirt.html" class="product-item">
-            <picture class="blue-shirt">
-                <source srcset="bilderavif/blueshirtfront.avif" type="image/avif">
-                <img src="bilderjpg/blueshirtfront.png" alt="Blå cykeltröja" width="450" height="394">
-            </picture>
-            <ul>
-                <li>Cykeltröja från Italien</li>
-                <li>349 kr</li>
-            </ul>
-            <h2>Välj produkt</h2>
-        </a>
-        <div>
-            <picture class="white-shirt">
-                <source srcset="bilderavif/whiteshirtfront.avif" type="image/avif">
-                <img src="bilderjpg/whiteshirtfront.jpg" alt="Röd cykeltröja" width="485" height="409">
-            </picture>
-        </div>
-        <div>
-            <picture class="saddle">
-                <source srcset="bilderavif/saddle.avif" type="image/avif">
-                <img src="bilderjpg/saddle.jpg" alt="Cykelsadel" width="485" height="409">
-            </picture>
-        </div>-->
+        <!--   <a href="blueshirt.html" class="select-product-btn">Se mer om produkt</a> <a href="blueshirt.html" class="product-item"> -->
 
     </main>
     <footer>

@@ -72,6 +72,10 @@
             justify-content: center;
         }
         
+        .about-us h1 {
+            margin-top: 3rem;
+        }
+        
         .logo {
             margin-left: 5rem;
             font-size: 1.5rem;
@@ -120,7 +124,7 @@
             display: flex;
             gap: 0.5rem;
             align-items: center;
-            margin-left: 3rem;
+            margin-left: 1rem;
             color: black;
             font-family: "Inter", "Arial", sans-serif;
         }
@@ -376,13 +380,16 @@
             text-align: center;
         }
         
-        .hero-overlay a.btn-overlay:hover {
+        .hero-overlay a.btn-overlay:hover,
+        .select-product-btn:hover {
             background: linear-gradient(to right, #646363, #0e0505);
             color: #ffffff;
         }
         
         .hero-overlay a.btn-overlay:active,
-        .hero-overlay a.btn-overlay:focus {
+        .hero-overlay a.btn-overlay:focus,
+        .select-product-btn:active,
+        .select-product-btn:focus {
             border: #fff;
         }
         
@@ -463,8 +470,15 @@
             gap: 5rem;
         }
         
-        .products {
+        .products,
+        .products-equipment {
             display: flex;
+            gap: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .products-equipment {
+            margin-bottom: 0;
         }
         
         .products h1 {
@@ -474,15 +488,17 @@
             justify-content: center;
         }
         
-        .product-item a {
+        .product-item a,
+        .first-item a {
             text-decoration: none;
             color: inherit;
         }
         
-        .product-item {
+        .product-item,
+        .first-item {
             display: flex;
             flex-direction: column;
-            background-color: #e2e2e2;
+            background-color: #e4dfdf;
             border-radius: 0.5rem;
             padding: 1rem;
             overflow: hidden;
@@ -490,22 +506,161 @@
             width: fit-content;
             transition: transform 0.3s ease;
             margin: 1rem;
-            width: 350px;
+            width: 480px;
             height: auto;
         }
         
-        .product-item:hover {
+        .first-item {
+            width: 850px;
+            height: auto;
+        }
+        
+        .product-item:hover,
+        .first-item:hover {
             transform: scale(1.05);
         }
         
         .product-info {
             margin: 0 auto;
             text-align: left;
+            line-height: 1.5;
         }
         
-        .product-info .price {
+        .product-information-details {}
+        
+        .product-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 2rem;
+            border-radius: 12px;
+        }
+        
+        .product-description {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            gap: 1rem;
+            margin-top: 10rem;
+        }
+        
+        .detail-information-details {
+            margin-bottom: auto;
+            margin-left: 5rem;
+            width: 35%;
+            flex-direction: column;
+            align-items: left;
+        }
+        
+        .products-items {
+            display: flex;
+            flex-direction: row;
+            gap: 3rem;
+            border-radius: 14px;
+        }
+        
+        .product-images,
+        .saddle-image,
+        .helmet-images {
+            position: relative;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            padding-top: 1rem;
+            overflow: hidden;
+            box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.123);
+            width: fit-content;
+            transition: transform 0.3s ease;
+            margin: 0rem;
+            height: auto;
+            margin-top: 1rem;
+        }
+        
+        .saddle-image {
+            margin-bottom: 5rem;
+            width: 40%;
+        }
+        
+        .helmet-images {
+            width: 35%;
+        }
+        
+        .product-images figure {
+            margin-bottom: 0rem;
+        }
+        
+        .product-description img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            margin-bottom: 0rem;
+            background-color: #ece7e7;
+        }
+        
+        .detail-information-details {
+            margin-top: 2rem;
+        }
+        
+        .detail-information-details h1 {
+            margin-bottom: 1rem;
+        }
+        
+        .detail-information-details ul {
+            margin-bottom: 1rem;
+            list-style: none;
+        }
+        
+        .detail-information-details .sizes {
+            display: flex;
+            flex-direction: row;
+            gap: 3rem;
+            padding: 1rem;
+            align-items: left;
+            justify-content: center;
+            margin-right: auto;
+            width: fit-content;
+        }
+        
+        .sizes button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 1.2rem;
             font-weight: bold;
-            color: #BD5500;
+        }
+        
+        .detail-information-details .sizes li {
+            padding: 0.5rem 1rem;
+            background-color: #ff7300;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .cycle-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            text-align: left;
+            line-height: 1.5;
+        }
+        
+        .price {
+            font-weight: bold;
+            color: #CC2D05;
+            font-size: 1.3rem;
+        }
+        
+        .price-tag {
+            font-weight: bold;
+            color: #CC2D05;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
         }
         
         .select-product-btn {
@@ -514,29 +669,49 @@
             padding: 0.5rem 1rem;
             background-color: #ff7300;
             color: #000000;
+            font-size: 1.2rem;
             text-decoration: none;
             border-radius: 0.5rem;
             font-weight: bold;
-            transition: background-color 0.3s ease;
+            pointer-events: auto;
         }
         
-        .select-product-btn:hover {
-            background: linear-gradient(to right, #646363, #0e0505);
-            color: #ffffff;
+        .description-info li {
+            margin-top: 1rem;
+            line-height: 1.5;
         }
         
-        .blue-shirt {
-            aspect-ratio: 1.14 / 1;
+        .first-shirt img {
+            margin-bottom: 5rem;
         }
         
         .saddle img {
             border-radius: 10px;
         }
         
+        #helmet-video {
+            margin-top: 8vh;
+            width: 100%;
+        }
+        
         @media (max-width: 767px) {
-            .red-shirt img {
-                width: 50%;
+            .products {
+                flex-direction: column;
             }
+            .logo img {
+                margin-left: 0.5rem;
+                width: 80%;
+                height: auto;
+            }
+            .first-item {
+                width: 80%;
+                height: auto;
+            }
+            .bicycle img {
+                width: 100%;
+                height: auto;
+            }
+            .red-shirt img {}
             header {
                 background-color: #272832;
                 display: flex;
@@ -695,7 +870,7 @@
         
         @media (max-width: 430px) {
             .logo {
-                margin-left: 1rem;
+                margin-left: 0rem;
             }
             .company-info,
             .web-developer {

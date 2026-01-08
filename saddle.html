@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cykelnavet - Hem</title>
+    <title>Cykelnavet - Cykelsadel</title>
     <meta name="description" content="Din webbutik för utrustning till din cykel. Hitta allt du behöver för din cykel hos Cykelnavet.">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
@@ -18,8 +18,8 @@
     <link rel="manifest" href="/bilder/site.webmanifest">
 </head>
 
-<body class="front-page-body">
-    <header class="front-page-header">
+<body>
+    <header>
         <a href="index.html" aria-current="page" class="logo"><img src="bilder/cykelnav-logo.svg" alt="Företagslogotyp Cykelnavet"></a>
         <button id="open-sidebarbutton" aria-controls="navBar" aria-expanded="false" aria-label="Öppna huvudmeny" onclick="openSidebar()">
             <svg xmlns="http://www.w3.org/2000/svg" height="3rem" viewBox="0 -960 960 960" width="3rem" fill="#fff">
@@ -55,73 +55,93 @@
         </nav>
         <div id="overlay" aria-hidden="true" onclick="closeSidebar()"></div>
     </header>
-    <main class="main-page">
-        <h1>Upptäck cykling på nästa nivå</h1>
-        <div class="hero-overlay">
-            <a href="produkter.html" class="btn-overlay">
-                Utforska våra produkter
-            </a>
-        </div>
-        <picture class="hero-image">
-            <!-- Laddar in minst bild vid mobilläge -->
-            <source media="(max-width: 600px)" srcset="bilderavif/cyclingstore-1000.avif" type="image/avif">
-            <source media="(max-width: 600px)" srcset="bilder/cyclingstore-1000.jpg" type="image/jpeg">
-
-            <!-- Laddar in medium bild vid tabletläge -->
-            <source media="(max-width: 1200px)" srcset="bilderavif/cyclingstore-1600.avif" type="image/avif">
-            <source media="(max-width: 1200px)" srcset="bilder/cyclingstore-1600.jpg" type="image/jpeg">
-
-            <!-- Laddar in stor bild vid desktopläge -->
-            <source srcset="bilderavif/cyclingstore-2400.avif" type="image/avif">
-            <source srcset="bilder/cyclingstore-2400.jpg" type="image/jpeg">
-
-            <!-- fallback bild -->
-            <img src="bilder/cyclingstore-1600.jpg" alt="Cykelbutik med cyklar och utrustning" fetchpriority="high" loading="eager" decoding="async">
-        </picture>
-
+    <div class="sub-navigation">
+        <nav aria-label="Navigering för brödsmulor">
+            <ol class="breadcrumbs">
+                <li><a href="index.html" class="breadcrumb-item"> Hem</a> ></li>
+                <li><a href="produkter.html" class="breadcrumb-item"> Produkter</a> ></li>
+                <li aria-current="page">Cykelsadel</li>
+            </ol>
+        </nav>
+    </div>
+    <main>
+        <section class="product-container" aria-label="Produktbilder">
+            <div class="product-description">
+                <div class="saddle-image">
+                    <picture>
+                        <source srcset="bilderavif/saddle.avif" type="image/avif">
+                        <img src="bilderjpg/saddle.jpg" alt="Cykelsadel Prologo" fetchpriority="high" height="468" width="450">
+                    </picture>
+                </div>
+                <div class="detail-information-details">
+                    <h1>Cykelsadel från Prologo</h1>
+                    <h2 class="price-tag">799 kr</h2>
+                    <div>
+                        <p>Välj passform:</p>
+                        <ul class="sizes">
+                            <li><button>Normal</button></li>
+                            <li><button>Bred</button></li>
+                        </ul>
+                    </div>
+                    <ul class="description-info">
+                        <li><strong>Produktbeskrivning:</strong> Cykelsadeln från välkända Prologo är i toppklass. En favorit bland proffscyklisterna Pogačar och Van der Poel.</li>
+                        Detta är sadeln du vill ha för optimal komfort och hög kvalitet.</li>
+                        <li><strong>Vikt:</strong> 175 gram</li>
+                        <li><strong>Mått:</strong> 255 mm x 140 mm</li>
+                        <li><strong>Material:</strong> Kolfiber, tirox och lättviktsmaterial EVA-skum</li>
+                        <li><strong>Användningsområde:</strong> Allround, vid högre hastigheter får denna sadel optimala aerodynamiska egenskaper.</li>
+                        <li><strong>Ergonomi:</strong> Integrerad PAS-kanal för att höja komforten, med denna sadel kan du cykla längre sträckor utan obehag.</li>
+                        </li>
+                    </ul>
+                    <button class="select-product-btn">Lägg i varukorg</button>
+                </div>
+            </div>
+        </section>
     </main>
-
     <footer>
         <address class="footer-contact">
-            <h2>Kontaktuppgifter</h2>
+            <h3>Kontaktuppgifter</h3>
             <ul>
-                <li><a href="tel:0683807799">068 - 380 77 99<svg xmlns="http://www.w3.org/2000/svg" height="24px"
-                            viewBox="0 -960 960 960" width="24px" fill="#fff">
-                            <path
-                                d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5 247T631-329Q531-229 409-174.5T162-120Zm556-480q17-39 26-79t14-81h-88l-18 94 66 66ZM360-244l-66-66-94 20v88q41-3 81-14t79-28Zm358-356ZM360-244Z" />
-                        </svg></a></li>
-                <li><a href="mailto:cykelnavet@kontakt.se">cykelnavet@kontakt.se<svg xmlns="http://www.w3.org/2000/svg"
+                <li><a href="tel:0683807799">068 - 380 77 99<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
                             height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
                             <path
-                                d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                                d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5
+                    247T631-329Q531-229 409-174.5T162-120Zm556-480q17-39 26-79t14-81h-88l-18 94 66 66ZM360-244l-66-66-94 20v88q41-3 81-14t79-28Zm358-356ZM360-244Z " />
+                        </svg></a></li>
+                <li><a href="mailto:cykelnavet@kontakt.se">cykelnavet@kontakt.se<svg xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                            <path
+                                d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z " />
                         </svg></a></li>
             </ul>
         </address>
         <div class="footer-copyright">
             <ul class="footer-socialmedia">
-                <li><a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px"
-                            viewBox="0 0 512 512"
+                <li><a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            width="24px" height="24px" viewBox="0 0 512 512"
                             fill="#fff"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
-                            <path
-                                d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5l0-170.3-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 175.9C413.8 494.8 512 386.9 512 256z" />
+                            <path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5l0-170.3-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0
+                    27.8 83.6 0-14.4 78.2-69.3 0 0 175.9C413.8 494.8 512 386.9 512 256z " />
                         </svg></a></li>
-                <li><a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="24px"
+                <li><a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            width="24px" height="24px" fill="#fff"
+                            viewBox="0 0 448 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                            <path d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9
+                    0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8
+                    19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6
+                    42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                        </svg></a></li>
+                <li><a href="#" aria-label="X"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24px"
                             height="24px" fill="#fff"
                             viewBox="0 0 448 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                             <path
-                                d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-                        </svg></a></li>
-                <li><a href="#" aria-label="X"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px"
-                            fill="#fff"
-                            viewBox="0 0 448 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
-                            <path
-                                d="M357.2 48L427.8 48 273.6 224.2 455 464 313 464 201.7 318.6 74.5 464 3.8 464 168.7 275.5-5.2 48 140.4 48 240.9 180.9 357.2 48zM332.4 421.8l39.1 0-252.4-333.8-42 0 255.3 333.8z" />
+                                d="M357.2 48L427.8 48 273.6 224.2 455 464 313 464 201.7 318.6 74.5 464 3.8 464 168.7 275.5-5.2 48 140.4 48 240.9 180.9 357.2 48zM332.4 421.8l39.1 0-252.4-333.8-42 0 255.3 333.8z " />
                         </svg></a></li>
             </ul>
             <p class="copyright-text"> Copyright &copy; 2026 Cykelnavet</p>
         </div>
         <nav class="footer-policy">
-            <h2>Våra villkor</h2>
+            <h3>Våra villkor</h3>
             <ul>
                 <li><a href="integritetspolicy.html" class="link">Integritetspolicy</a></li>
                 <li class="non-link">Köpvillkor</li>
@@ -130,10 +150,4 @@
             </ul>
         </nav>
     </footer>
-    <script>
-        window.addEventListener("scroll", () => {
-            const header = document.querySelector(".front-page-header");
-            header.classList.toggle("scrolled", window.scrollY > 40);
-        });
-    </script>
 </body>
