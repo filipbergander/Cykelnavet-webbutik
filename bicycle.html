@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cykelnavet - Produkter</title>
-    <meta name="description" content="Din cykelwebbutik för produkter till dig och din cykel. Hitta allt du behöver för din cykel hos Cykelnavet.">
+    <title>Cykelnavet - Cykel Specialized</title>
+    <meta name="description" content="Din webbutik för utrustning till din cykel. Hitta allt du behöver för din cykel hos Cykelnavet.">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?&family=Inter:wght@400
@@ -21,7 +21,7 @@
 
 <body>
     <header>
-        <a href="index.html" class="logo"><img src="bilder/cykelnav-logo.svg" alt="Företagslogotyp Cykelnavet"></a>
+        <a href="index.html" aria-current="page" class="logo"><img src="bilder/cykelnav-logo.svg" alt="Företagslogotyp Cykelnavet"></a>
         <button id="open-sidebarbutton" aria-controls="navBar" aria-expanded="false" aria-label="Öppna huvudmeny" onclick="openSidebar()">
             <svg xmlns="http://www.w3.org/2000/svg" height="3rem" viewBox="0 -960 960 960" width="3rem" fill="#fff">
                 <path
@@ -37,9 +37,8 @@
                                 d="m480-444.62-209.69 209.7q-7.23 7.23-17.5 7.42-10.27.19-17.89-7.42-7.61-7.62-7.61-17.7 0-10.07 7.61-17.69L444.62-480l-209.7-209.69q-7.23-7.23-7.42-17.5-.19-10.27 7.42-17.89 7.62-7.61 17.7-7.61 10.07 0 17.69 7.61L480-515.38l209.69-209.7q7.23-7.23 17.5-7.42 10.27-.19 17.89 7.42 7.61 7.62 7.61 17.7 0 10.07-7.61 17.69L515.38-480l209.7 209.69q7.23 7.23 7.42 17.5.19 10.27-7.42 17.89-7.62 7.61-17.7 7.61-10.07 0-17.69-7.61L480-444.62Z" />
                         </svg><span class="menu-text">Stäng</span>
                     </button></li>
-                <li><a href="produkter.html" id="current-link" class="gear-icon"><span><svg
-                                xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                                fill="#fff">
+                <li><a href="produkter.html" class="gear-icon"><span><svg xmlns="http://www.w3.org/2000/svg"
+                                height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
                                 <path
                                     d="M200-80q-83 0-141.5-58.5T0-280q0-83 58.5-141.5T200-480q83 0 141.5 58.5T400-280q0 83-58.5 141.5T200-80Zm0-80q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm240-40v-200L312-512q-12-11-18-25.5t-6-30.5q0-16 6.5-30.5T312-624l112-112q12-12 27.5-18t32.5-6q17 0 32.5 6t27.5 18l76 76q28 28 64 44t76 16v80q-57 0-108.5-22T560-604l-32-32-96 96 88 92v248h-80Zm180-540q-33 0-56.5-23.5T540-820q0-33 23.5-56.5T620-900q33 0 56.5 23.5T700-820q0 33-23.5 56.5T620-740ZM760-80q-83 0-141.5-58.5T560-280q0-83 58.5-141.5T760-480q83 0 141.5 58.5T960-280q0 83-58.5 141.5T760-80Zm0-80q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Z" />
                             </svg></span>Produkter</a></li>
@@ -61,80 +60,43 @@
         <nav aria-label="Navigering för brödsmulor">
             <ol class="breadcrumbs">
                 <li><a href="index.html" class="breadcrumb-item"> Hem</a> ></li>
-                <li aria-current="page" class="breadcrumb-item"> Produkter</li>
+                <li><a href="produkter.html" class="breadcrumb-item"> Produkter</a> ></li>
+                <li aria-current="page">Cykel Specialized</li>
             </ol>
         </nav>
     </div>
-    <main class="products-main">
-        <h1>Våra produkter</h1>
-        <article class="first-item">
-            <a href="bicycle.html">
-                <picture class="bicycle">
-                    <source srcset="bilderavif/bicycle.avif" type="image/avif">
-                    <img src="bilderjpg/bicycle.png" alt="Cykel från Specialized" width="800" height="508" fetchpriority="high">
-                </picture>
-                <div class="cycle-info">
-                    <h2>Kolfiber cykel av Specialized</h2>
-                    <p>Vår lättaste och snabbaste cykel</p>
-                    <h3 class="price">49 999 kr</h3>
+    <main>
+        <section class="product-container" aria-label="Produktbilder">
+            <div class="product-description">
+                <div class="bicycle-image">
+                    <picture>
+                        <source srcset="bilderavif/bicycle.avif" type="image/avif">
+                        <img src="bilderjpg/bicycle.png" alt="Cykel från Specialized" fetchpriority="high" height="800" width="508">
+                    </picture>
                 </div>
-            </a>
-        </article>
-        <section class="products-equipment">
-            <article class="product-item">
-                <a href="saddle.html">
-                    <picture class="saddle">
-                        <source srcset="bilderavif/saddle.avif" type="image/avif">
-                        <img src="bilderjpg/saddle.jpg" alt="Cykelsadel" width="450" height="428" loading="lazy">
-                    </picture>
-                    <div class="product-info">
-                        <h2>Cykelsadel</h2>
-                        <p>Tillverkad av välkända Prologo</p>
-                        <h3 class="price">799 kr</h3>
+                <section class="detail-information-details">
+                    <h1>Cykel från Specialized</h1>
+                    <p class="price-tag">49 999 kr</p>
+                    <div>
+                        <h2>Välj storlek:</h2>
+                        <ul class="sizes">
+                            <li><button>Normal</button></li>
+                            <li><button>Bred</button></li>
+                        </ul>
                     </div>
-                </a>
-            </article>
-            <article class="product-item">
-                <a href="helmet.html">
-                    <picture class="helmet">
-                        <source srcset="bilderavif/helmetfront.avif" type="image/avif">
-                        <img src="bilderjpg/helmetfront.jpg" alt="Cykelhjälm" width="450" height="428" loading="lazy">
-                    </picture>
-                    <div class="product-info">
-                        <h2>Röd cykelhjälm</h2>
-                        <p>Det viktigaste skyddet för dig</p>
-                        <h3 class="price">899 kr</h3>
-                    </div>
-                </a>
-            </article>
-        </section>
-        <section class="products-equipment">
-            <article class="product-item">
-                <a href="blueshirt.html">
-                    <picture class="blue-shirt">
-                        <source srcset="bilderavif/blueshirt-front-small.avif" type="image/avif">
-                        <img src="bilderjpg/blueshirt-front-small.png" alt="Blå cykeltröja" width="450" height="409" loading="lazy">
-                    </picture>
-                    <div class="product-info">
-                        <h2>Blå cykeltröja</h2>
-                        <p>Italiens landslagströja "Maglia Azzurra"</p>
-                        <h3 class="price">349 kr</h3>
-                    </div>
-                </a>
-            </article>
-            <article class="product-item">
-                <a href="redshirt.html">
-                    <picture class="red-shirt">
-                        <source srcset="bilderavif/redshirt-front-small.avif" type="image/avif">
-                        <img src="bilderjpg/redshirt-front-small.png" alt="Röd cykeltröja" width="450" height="409" loading="lazy">
-                    </picture>
-                    <div class="product-info">
-                        <h2>Röd cykeltröja</h2>
-                        <p>Från det professionella cykelstallet TP</p>
-                        <h3 class="price">449 kr</h3>
-                    </div>
-                </a>
-            </article>
+                    <ul class="description-info">
+                        <li><strong>Produktbeskrivning:</strong> Cykelsadeln från välkända Prologo är i toppklass. En favorit bland proffscyklisterna Pogačar och Van der Poel.</li>
+                        Detta är sadeln du vill ha för optimal komfort och hög kvalitet.</li>
+                        <li><strong>Vikt:</strong> 175 gram</li>
+                        <li><strong>Mått:</strong> 255 mm x 140 mm</li>
+                        <li><strong>Material:</strong> Kolfiber, tirox och lättviktsmaterial EVA-skum</li>
+                        <li><strong>Användningsområde:</strong> Allround, vid högre hastigheter får denna sadel optimala aerodynamiska egenskaper.</li>
+                        <li><strong>Ergonomi:</strong> Integrerad PAS-kanal för att höja komforten, med denna sadel kan du cykla längre sträckor utan obehag.</li>
+                        </li>
+                    </ul>
+                    <button class="select-product-btn">Lägg i varukorg</button>
+                </section>
+            </div>
         </section>
     </main>
     <footer>
@@ -144,12 +106,13 @@
                 <li><a href="tel:0683807799">068 - 380 77 99<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
                             height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
                             <path
-                                d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5 247T631-329Q531-229 409-174.5T162-120Zm556-480q17-39 26-79t14-81h-88l-18 94 66 66ZM360-244l-66-66-94 20v88q41-3 81-14t79-28Zm358-356ZM360-244Z" />
+                                d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5
+                    247T631-329Q531-229 409-174.5T162-120Zm556-480q17-39 26-79t14-81h-88l-18 94 66 66ZM360-244l-66-66-94 20v88q41-3 81-14t79-28Zm358-356ZM360-244Z " />
                         </svg></a></li>
                 <li><a href="mailto:cykelnavet@kontakt.se">cykelnavet@kontakt.se<svg xmlns="http://www.w3.org/2000/svg"
                             aria-hidden="true" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
                             <path
-                                d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                                d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z " />
                         </svg></a></li>
             </ul>
         </address>
@@ -158,20 +121,22 @@
                 <li><a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
                             width="24px" height="24px" viewBox="0 0 512 512"
                             fill="#fff"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
-                            <path
-                                d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5l0-170.3-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 175.9C413.8 494.8 512 386.9 512 256z" />
+                            <path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5l0-170.3-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0
+                    27.8 83.6 0-14.4 78.2-69.3 0 0 175.9C413.8 494.8 512 386.9 512 256z " />
                         </svg></a></li>
                 <li><a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
                             width="24px" height="24px" fill="#fff"
                             viewBox="0 0 448 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
-                            <path
-                                d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                            <path d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9
+                    0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8
+                    19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6
+                    42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
                         </svg></a></li>
                 <li><a href="#" aria-label="X"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="24px"
                             height="24px" fill="#fff"
                             viewBox="0 0 448 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                             <path
-                                d="M357.2 48L427.8 48 273.6 224.2 455 464 313 464 201.7 318.6 74.5 464 3.8 464 168.7 275.5-5.2 48 140.4 48 240.9 180.9 357.2 48zM332.4 421.8l39.1 0-252.4-333.8-42 0 255.3 333.8z" />
+                                d="M357.2 48L427.8 48 273.6 224.2 455 464 313 464 201.7 318.6 74.5 464 3.8 464 168.7 275.5-5.2 48 140.4 48 240.9 180.9 357.2 48zM332.4 421.8l39.1 0-252.4-333.8-42 0 255.3 333.8z " />
                         </svg></a></li>
             </ul>
             <p class="copyright-text"> Copyright &copy; 2026 Cykelnavet</p>
