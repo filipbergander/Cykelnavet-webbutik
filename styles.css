@@ -656,17 +656,12 @@
             line-height: 1.5;
         }
         
-        .price {
-            font-weight: bold;
-            color: #BB2A02;
-        }
-        
         .price-tag {
             font-weight: bold;
             color: #BB2A02;
             margin-top: 1rem;
             margin-bottom: 1rem;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             line-height: 1.3;
         }
         
