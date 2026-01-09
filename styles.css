@@ -652,13 +652,12 @@
         
         .price {
             font-weight: bold;
-            color: #CC2D05;
-            font-size: 1.3rem;
+            color: #BB2A02;
         }
         
         .price-tag {
             font-weight: bold;
-            color: #CC2D05;
+            color: #BB2A02;
             margin-top: 1rem;
             margin-bottom: 1rem;
         }
