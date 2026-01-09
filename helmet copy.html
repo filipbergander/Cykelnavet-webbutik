@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cykelnavet - Cykelsadel</title>
+    <title>Cykelnavet - Cykelhjälm</title>
     <meta name="description" content="Din webbutik för utrustning till din cykel. Hitta allt du behöver för din cykel hos Cykelnavet.">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?&family=Inter:wght@400&family=Outfit:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?&family=Inter:wght@400
+&family=Outfit:wght@400
+&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="/bilder/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="/bilder/favicon.svg">
     <link rel="shortcut icon" href="/bilder/favicon.ico">
@@ -59,53 +61,63 @@
             <ol class="breadcrumbs">
                 <li><a href="index.html" class="breadcrumb-item"> Hem</a> ></li>
                 <li><a href="produkter.html" class="breadcrumb-item"> Produkter</a> ></li>
-                <li aria-current="page">Cykelsadel</li>
+                <li aria-current="page">Cykelhjälm</li>
             </ol>
         </nav>
     </div>
     <main>
         <section class="product-container" aria-label="Produktbilder">
-            <h1>Cykelsadel från Prologo</h1>
+            <h1>Cykelhjälm från Specialized</h1>
+            <!-- Bilder + video i vänster kolumn -->
             <div class="product-description">
-                <div class="saddle-image">
-                    <!--<picture>
-                        <source srcset="bilderavif/saddle.avif" type="image/avif">
-                        <img src="bilderjpg/saddle.jpg" alt="Cykelsadel Prologo" fetchpriority="high" height="450" width="428">
-                    </picture>
-                    -->
-                    <picture>
-                        <!-- Laddar in stor bild vid desktopläge -->
-                        <source media="(min-width: 1000px)" srcset="bilderavif/saddle-large.avif" type="image/avif">
-                        <source media="(min-width: 1000px)" srcset="bilderavif/saddle-large.jpg" type="image/jpeg">
-                        <!-- Laddar in medium bild vid mindre enheter -->
-                        <source media="(max-width: 999px)" srcset="bilderavif/saddle-medium.avif" type="image/avif">
-                        <source media="(max-width: 999px)" srcset="bilderavif/saddle-medium.jpg" type="image/jpeg">
-                        <!-- fallback bild -->
-                        <img src="bilderjpg/saddle-medium.jpg" alt="Cykelsadel Prologo" fetchpriority="high" height="675" width="650">
-                    </picture>
-                </div>
+                <picture class="first-helmet">
+                    <source srcset="bilderavif/helmetfront.avif" type="image/avif">
+                    <img src="bilderjpg/helmetfront.jpg" alt="Röd cykelhjälm framifrån" fetchpriority="high" height="468" width="450">
+                </picture>
+                </figure>
+
+
+                <!-- Produktinformation höger kolumn -->
                 <section class="info-column">
-                    <p class="price">Pris: <span class="price-tag">799 kr</span></p>
+                    <p class="price">Pris: <span class="price-tag">899 kr</span></p>
                     <div>
-                        <h2>Välj passform:</h2>
+                        <h2>Välj storlek:</h2>
                         <ul class="sizes">
-                            <li><button>Normal</button></li>
-                            <li><button>Bred</button></li>
+                            <li><button>S</button></li>
+                            <li><button>M</button></li>
+                            <li><button>L</button></li>
                         </ul>
                     </div>
                     <ul class="description-info">
-                        <li><strong>Produktbeskrivning:</strong> Cykelsadeln från välkända Prologo är i toppklass. En favorit bland proffscyklisterna Pogačar och Van der Poel.</li>
-                        Detta är sadeln du vill ha för optimal komfort och hög kvalitet.</li>
-                        <li><strong>Vikt:</strong> 175 gram</li>
-                        <li><strong>Mått:</strong> 255 mm x 140 mm</li>
-                        <li><strong>Material:</strong> Kolfiber, tirox och lättviktsmaterial EVA-skum</li>
-                        <li><strong>Användningsområde:</strong> Allround, vid högre hastigheter får denna sadel optimala aerodynamiska egenskaper.</li>
-                        <li><strong>Ergonomi:</strong> Integrerad PAS-kanal för att höja komforten, med denna sadel kan du cykla längre sträckor utan obehag.</li>
+                        <li><strong>Produktbeskrivning:</strong> Cykelhjälmen från Specialized skyddar dig från skador. Mips-systemet höjer säkerhetsklassen ytterligare. Väl omtalad hjälm som proffsstallet Bora Hansgrohe använder. Skydda ditt huvud likt proffsen
+                            med denna hjälm.</li>
+                        <li><strong>Vikt:</strong> 235 gram</li>
+                        <li><strong>Färg:</strong> Röd och svart</li>
+                        <li><strong>Säkerhet:</strong> Med Mips-tekniksystemet klassas denna hjälm med högsta säkerhet.
+                        </li>
+                        <li><strong>Användningsområde:</strong> Gravel, Mountainbike och Landsvägscykling</li>
+                        <li><strong>Ergonomi:</strong> Välventilerad hjälm med många ventilationsöppningar. Justerbara remmar för att passa just din storlek.</li>
+                        <li><strong>Storlekar:</strong> S 51-55 cm, M 56-60 cm, L 61-65 cm</li>
                     </ul>
                     <button class="select-product-btn">Lägg i varukorg</button>
                 </section>
             </div>
+            <div class="helmet-images">
+                <figure>
+                    <figure>
+                        <picture class="second-helmet">
+                            <source srcset="bilderavif/helmetback.avif" type="image/avif">
+                            <img src="bilderjpg/helmetback.jpg" alt="Röd cykelhjälm bakifrån" loading="lazy">
+                        </picture>
+                    </figure>
+                    <video class=i d="helmet-video" preload="metadata" poster="bilderjpg/poster.jpg" width="300" height="225" muted controls>
+                        <source src="filmer/helmetmovie.webm" type="video/webm" ; codecs="vp9">
+                        <source src="filmer/helmetmovie.mp4" type="video/mp4">
+                        " Din webbläsare stödjer inte videouppspelning."
+                    </video>
+            </div>
         </section>
+
     </main>
     <footer>
         <section class="footer-contact">

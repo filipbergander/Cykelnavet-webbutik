@@ -67,30 +67,37 @@
     </div>
     <main>
         <section class="product-container" aria-label="Produktbilder">
+            <h1>Cykelhjälm Specialized</h1>
+            <!-- Bild + video i vänster kolumn -->
             <div class="product-description">
                 <div class="helmet-images">
                     <figure>
-                        <picture class="first-shirt">
+                        <picture class="first-helmet">
                             <source srcset="bilderavif/helmetfront.avif" type="image/avif">
                             <img src="bilderjpg/helmetfront.jpg" alt="Röd cykelhjälm framifrån" fetchpriority="high" height="468" width="450">
                         </picture>
-                    </figure>
-                    <figure>
-                        <picture class="second-shirt">
-                            <source srcset="bilderavif/helmetback.avif" type="image/avif">
-                            <img src="bilderjpg/helmetback.jpg" alt="Röd cykelhjälm bakifrån" loading="lazy">
-                        </picture>
-                    </figure>
+                    </figure> <video id="helmet-video" preload="metadata" poster="bilderjpg/poster.jpg" width="auto" height="300" muted controls>
+                        <source src="filmer/helmetmovie.webm" type="video/webm" ; codecs="vp9">
+                        <source src="filmer/helmetmovie.mp4" type="video/mp4">
+                        " Din webbläsare stödjer inte videouppspelning."
+                    </video>
                 </div>
-                <section class="detail-information-details">
-                    <h1>Cykelhjälm från Specialized</h1>
-                    <p class="price-tag">899 kr</p>
+                <!--<figure>
+                    <picture class="second-helmet">
+                        <source srcset="bilderavif/helmetback.avif" type="image/avif">
+                        <img src="bilderjpg/helmetback.jpg" alt="Röd cykelhjälm bakifrån" loading="lazy">
+                    </picture>
+                </figure>
+                -->
+                <!-- Produktinformation höger kolumn -->
+                <section class="info-column-helmet">
+                    <p class="price">Pris: <span class="price-tag">899 kr</span></p>
                     <div>
                         <h2>Välj storlek:</h2>
                         <ul class="sizes">
-                            <li><button>S 51-55 cm</button></li>
-                            <li><button>M 56-60 cm</button></li>
-                            <li><button>L 61-65 cm</button></li>
+                            <li><button>S</button></li>
+                            <li><button>M</button></li>
+                            <li><button>L</button></li>
                         </ul>
                     </div>
                     <ul class="description-info">
@@ -102,13 +109,9 @@
                         </li>
                         <li><strong>Användningsområde:</strong> Gravel, Mountainbike och Landsvägscykling</li>
                         <li><strong>Ergonomi:</strong> Välventilerad hjälm med många ventilationsöppningar. Justerbara remmar för att passa just din storlek.</li>
+                        <li><strong>Storlekar:</strong> S 51-55 cm, M 56-60 cm, L 61-65 cm</li>
                     </ul>
                     <button class="select-product-btn">Lägg i varukorg</button>
-                    <video class="product-images" id="helmet-video" preload="metadata" poster="bilderjpg/poster.jpg" playsinline muted controls>
-                        <source src="filmer/helmetmovie.webm" type="video/webm" ; codecs="vp9">
-                        <source src="filmer/helmetmovie.mp4" type="video/mp4">
-                        Din webbläsare stödjer inte videouppspelning.
-                    </video>
                 </section>
         </section>
     </main>

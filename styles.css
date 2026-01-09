@@ -554,10 +554,12 @@
                 margin-top: 5rem;
             }
             
-            .detail-information-details {
+            .info-column,
+            .info-column-helmet {
                 margin-bottom: auto;
                 margin-left: 3rem;
-                width: 35%;
+                width: 55%;
+                max-width: 55ch;
                 flex-direction: column;
             }
             
@@ -574,8 +576,8 @@
             
             .product-images,
             .saddle-image,
-            .helmet-images,
-            .bicycle-image {
+            .bicycle-image,
+            .helmet-images {
                 position: relative;
                 border-radius: 0.5rem;
                 padding: 1rem;
@@ -595,10 +597,6 @@
                 min-width: 450px;
             }
             
-            .helmet-images {
-                width: 35%;
-            }
-            
             .bicycle-image {
                 width: 50%;
             }
@@ -615,16 +613,19 @@
                 background-color: #ece7e7;
             }
             
-            .detail-information-details {
+            .info-column,
+            .info-column-helmet {
                 margin-top: 2rem;
             }
             
-            .detail-information-details ul {
+            .info-column ul,
+            .info-column-helmet ul {
                 margin-bottom: 1rem;
                 list-style: none;
             }
             
-            .detail-information-details .sizes {
+            .info-column .sizes,
+            .info-column-helmet .sizes {
                 display: flex;
                 flex-direction: row;
                 gap: 3rem;
@@ -642,7 +643,8 @@
                 font-weight: bold;
             }
             
-            .detail-information-details .sizes li {
+            .info-column .sizes li,
+            .info-column-helmet .sizes li {
                 padding: 0.5rem 1rem;
                 background-color: #ff7300;
                 border-radius: 0.5rem;
@@ -693,7 +695,8 @@
                 line-height: 1.5;
             }
             
-            .first-shirt img {
+            .first-shirt img,
+            .first-helmet img {
                 margin-bottom: 5rem;
             }
             
@@ -701,27 +704,43 @@
                 border-radius: 10px;
             }
             
-            #helmet-video {
-                margin-top: 12vh;
-                width: 100%;
+            .size {
+                font-weight: bold;
+                font-size: 1rem;
+                margin-left: 0.5rem;
+                flex-wrap: wrap;
             }
             
             @media (max-width: 1000px) {
-                .detail-information-details {
+                .info-column {
                     margin-bottom: auto;
                     margin-left: 2rem;
                     width: 75%;
                     flex-direction: column;
                 }
+                .info-column-helmet {
+                    width: 40%;
+                    margin-bottom: auto;
+                    margin-left: 1rem;
+                    margin-right: 0;
+                }
                 .saddle-image {
                     margin-bottom: 15rem;
                     width: 90%;
                 }
+                #helmet-video {
+                    width: 100%;
+                    height: auto;
+                }
+                .first-helmet img {
+                    margin-bottom: 2rem;
+                }
+                .helmet-images {
+                    margin-top: 0rem;
+                }
             }
             
-            @media (max-width: 800px) {}
-            
-            @media (max-width: 767px) {
+            @media (max-width: 790px) {
                 .products {
                     flex-direction: column;
                 }
@@ -899,12 +918,14 @@
                     gap: 2rem;
                     margin-top: 1rem;
                 }
-                .detail-information-details {
+                .info-column,
+                .info-column-helmet {
                     margin-left: 0;
                     width: 100%;
                     margin-top: 0;
                 }
-                .detail-information-details .sizes {
+                .info-column .sizes,
+                .info-column-helmet .sizes {
                     align-items: left;
                     margin-right: auto;
                     gap: 2rem;
@@ -941,7 +962,8 @@
                     min-width: 150px;
                     padding: 1rem 1rem;
                 }
-                .detail-information-details .sizes {
+                .info-column .sizes,
+                .info-column-helmet .sizes {
                     align-items: left;
                     gap: 2rem;
                     margin-left: 0;
@@ -958,10 +980,14 @@
                     width: 100%;
                     min-width: 275px;
                 }
+                .helmet-images {
+                    width: 100%;
+                }
             }
             
             @media (max-width: 320px) {
-                .detail-information-details .sizes {
+                .info-column .sizes,
+                .info-column-helmet .sizes {
                     align-items: left;
                     gap: 1.5rem;
                 }
