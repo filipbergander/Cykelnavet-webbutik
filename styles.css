@@ -554,6 +554,17 @@
                 margin-top: 5rem;
             }
             
+            .cycling-description {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+                gap: 1rem;
+                margin-top: 2rem;
+                width: 100%;
+            }
+            
             .info-column,
             .info-column-helmet {
                 margin-bottom: auto;
@@ -598,7 +609,10 @@
             }
             
             .bicycle-image {
-                width: 50%;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             
             .product-images figure {
@@ -606,6 +620,14 @@
             }
             
             .product-description img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                margin-bottom: 0rem;
+                background-color: #ece7e7;
+            }
+            
+            .cycling-description img {
                 width: 100%;
                 height: auto;
                 object-fit: cover;
@@ -926,7 +948,6 @@
                 }
                 .info-column .sizes,
                 .info-column-helmet .sizes {
-                    align-items: left;
                     margin-right: auto;
                     gap: 2rem;
                     margin-left: 2rem;
@@ -964,7 +985,6 @@
                 }
                 .info-column .sizes,
                 .info-column-helmet .sizes {
-                    align-items: left;
                     gap: 2rem;
                     margin-left: 0;
                 }
@@ -988,7 +1008,6 @@
             @media (max-width: 320px) {
                 .info-column .sizes,
                 .info-column-helmet .sizes {
-                    align-items: left;
                     gap: 1.5rem;
                 }
                 .saddle-image {
