@@ -204,8 +204,7 @@
         }
         
         .footer-contact a {
-            pointer-events: none;
-            cursor: default;
+            cursor: pointer;
             text-decoration: none;
             color: inherit;
         }
@@ -243,10 +242,6 @@
         
         .footer-policy li {
             margin-bottom: 0.5rem;
-        }
-        
-        .footer-policy h3 {
-            align-items: left;
         }
         
         .about-us {
@@ -361,7 +356,7 @@
             min-width: 250px;
             max-width: 600px;
             margin-top: 30vh;
-            pointer-events: none;
+            cursor: default;
         }
         
         .hero-overlay a.btn-overlay {
@@ -375,7 +370,7 @@
             font-weight: bold;
             transition: background-color 0.3s ease;
             z-index: 20;
-            pointer-events: auto;
+            cursor: pointer;
             box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.726);
             text-align: center;
         }
@@ -526,8 +521,6 @@
             line-height: 1.5;
         }
         
-        .product-information-details {}
-        
         .product-container {
             display: flex;
             flex-direction: row;
@@ -537,6 +530,13 @@
             border-radius: 12px;
         }
         
+        .product-container h1 {
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: 0;
+            margin-top: 5vh;
+        }
+        
         .product-description {
             display: flex;
             flex-direction: row;
@@ -544,7 +544,7 @@
             justify-content: center;
             margin: 0 auto;
             gap: 1rem;
-            margin-top: 10rem;
+            margin-top: 5rem;
         }
         
         .detail-information-details {
@@ -552,7 +552,6 @@
             margin-left: 5rem;
             width: 35%;
             flex-direction: column;
-            align-items: left;
         }
         
         .products-items {
@@ -623,7 +622,6 @@
             flex-direction: row;
             gap: 3rem;
             padding: 1rem;
-            align-items: left;
             justify-content: center;
             margin-right: auto;
             width: fit-content;
@@ -656,12 +654,17 @@
             line-height: 1.5;
         }
         
+        .price {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        
         .price-tag {
             font-weight: bold;
             color: #BB2A02;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             line-height: 1.3;
         }
         
@@ -675,7 +678,7 @@
             text-decoration: none;
             border-radius: 0.5rem;
             font-weight: bold;
-            pointer-events: auto;
+            cursor: pointer;
         }
         
         .description-info li {
