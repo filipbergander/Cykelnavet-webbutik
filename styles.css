@@ -535,6 +535,7 @@
             margin: 0 auto;
             margin-bottom: 0;
             margin-top: 5vh;
+            font-size: 2em;
         }
         
         .product-description {
@@ -605,11 +606,6 @@
         
         .detail-information-details {
             margin-top: 2rem;
-        }
-        
-        .detail-information-details h1 {
-            margin-bottom: 1rem;
-            font-size: 2em;
         }
         
         .detail-information-details ul {
