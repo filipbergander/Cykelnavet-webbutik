@@ -902,6 +902,7 @@
                 .detail-information-details {
                     margin-left: 0;
                     width: 100%;
+                    margin-top: 0;
                 }
                 .detail-information-details .sizes {
                     align-items: left;
@@ -956,9 +957,6 @@
                 .saddle-image {
                     width: 100%;
                     min-width: 275px;
-                }
-                .detail-information-details {
-                    margin-top: 0;
                 }
             }
             

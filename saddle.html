@@ -76,7 +76,13 @@
                     </picture>
                     -->
                     <picture>
-                        <source srcset="bilderavif/sadel-large.avif" type="image/avif">
+                        <!-- Laddar in stor bild vid desktopläge -->
+                        <source media="(min-width: 1000px)" srcset="bilderavif/saddle-large.avif" type="image/avif">
+                        <source media="(min-width: 1000px)" srcset="bilderavif/saddle-large.jpg" type="image/jpeg">
+                        <!-- Laddar in medium bild vid mindre enheter -->
+                        <source media="(max-width: 999px)" srcset="bilderavif/saddle-medium.avif" type="image/avif">
+                        <source media="(max-width: 999px)" srcset="bilderavif/saddle-medium.jpg" type="image/jpeg">
+                        <!-- fallback bild -->
                         <img src="bilderjpg/sadel-large.jpg" alt="Cykelsadel Prologo" fetchpriority="high" height="675" width="650">
                     </picture>
                 </div>
